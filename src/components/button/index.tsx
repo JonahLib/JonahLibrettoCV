@@ -13,8 +13,9 @@ const Button = ({
   const buttonClass = clsx(
     "py-2 px-4 rounded-md shadow-md font-bold",
     {
-      "bg-sky-400 text-white": theme === "primary",
-      "bg-white text-black border border-black": theme === "secondary",
+      "bg-sky-400 hover:bg-sky-300 text-white": theme === "primary",
+      "bg-white hover:bg-gray-100 text-black border border-black":
+        theme === "secondary",
     },
     className
   );
