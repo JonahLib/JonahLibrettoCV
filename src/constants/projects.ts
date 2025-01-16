@@ -6,7 +6,7 @@ export const PROJECTS: CardProps[] = [
     gitLink: "https://github.com/",
     siteLink: "https://github.com/",
     title: "Form",
-    description: "This project a usable form displaying diffrent form feilds",
+    description: "This project a usable form displaying different form felids",
   },
   {
     photo: "modal.svg",
@@ -20,13 +20,13 @@ export const PROJECTS: CardProps[] = [
     gitLink: "https://github.com/",
     siteLink: "https://github.com/",
     title: "Form",
-    description: "This project a usable form displaying diffrent form feilds",
+    description: "This project a usable form displaying different form felids",
   },
   {
     photo: "form.svg",
     gitLink: "https://github.com/",
     siteLink: "https://github.com/",
     title: "Form",
-    description: "This project a usable form displaying diffrent form feilds",
+    description: "This project a usable form displaying different form felids",
   },
 ];
