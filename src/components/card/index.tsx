@@ -23,13 +23,19 @@ const Card = ({ title, description, siteLink, gitLink, photo }: CardProps) => {
   };
 
   const renderTitle = (): ReactElement => {
-    return <h1 className="font-bold text-3xl text-black pl-2">{title}</h1>;
+    return (
+      <h1 className="font-bold text-3xl text-black pl-2 text-center">
+        {title}
+      </h1>
+    );
   };
 
   const renderDecription = (): NullableReactElement => {
     if (!description) return null;
 
-    return <p className="pl-2 text-black">{description}</p>;
+    return (
+      <p className="pl-2 text-black text-center text-wrap">{description}</p>
+    );
   };
 
   const renderWebProjectLink = () => {
@@ -51,7 +57,7 @@ const Card = ({ title, description, siteLink, gitLink, photo }: CardProps) => {
   };
 
   return (
-    <div className="bg-white w-auto h-80 rounded-lg shadow-lg flex flex-col">
+    <div className="bg-white w-full h-80 rounded-lg shadow-lg flex flex-col max-w-[400px] sm:max-w-[400px] lg:max-w-[500px]">
       {renderImage()}
       {renderTitle()}
       {renderDecription()}

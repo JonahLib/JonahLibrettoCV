@@ -6,7 +6,7 @@ export const PROJECTS: CardProps[] = [
     gitLink: "https://github.com/JonahLib/Forms",
     siteLink: "https://forms-two-chi.vercel.app/",
     title: "UI Library (Forms)",
-    description: "This project a usable form displaying different form felids",
+    description: "Reusable inputs to create forms",
   },
   {
     photo: "pokedex.svg",
