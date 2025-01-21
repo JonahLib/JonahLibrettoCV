@@ -1,6 +1,7 @@
 import Card from "@/components/card";
+import Chip from "@/components/chip";
 import Section from "@/components/section";
-import { PROJECTS } from "@/constants/projects";
+import { PROJECTS, SKILLS, SOFT_SKILLS } from "@/constants/projects";
 import { ReactElement } from "react";
 
 export default function Home() {
@@ -102,10 +103,63 @@ export default function Home() {
     );
   };
 
+  const renderEducationSection = (): ReactElement => {
+    return (
+      <Section title="Education" showBorder={false}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="bg-gray-200 rounded-xl p-2 w-full">
+            <h2 className="font-bold text-lg">
+              Software Developer Level 4 &mdash; Distinction
+            </h2>
+            <p className="font-bold text-sm pb-4">Jan 2021 - Oct 2023</p>
+            <ul className="flex flex-col gap-2 list-disc list-inside">
+              <li>Documented my learning.</li>
+              <li>
+                Worked with a coach to learn basic web development skills.
+              </li>
+              <li>Learned how to be part of an agile team.</li>
+            </ul>
+          </div>
+          <div className="bg-gray-200 rounded-xl p-2 w-full">
+            <h2 className="font-bold text-lg">Queen Elizabeths High School</h2>
+            <p className="font-bold text-sm pb-4">Jan 2016 - Feb 2020</p>
+          </div>
+        </div>
+      </Section>
+    );
+  };
+
+  const renderSkill = (): ReactElement => {
+    return (
+      <Section showBorder={false} title="Skills">
+        <ul className="w-full flex flex-wrap gap-2 max-w-[750px]">
+          {SKILLS.map((skill) => (
+            <Chip key={skill} text={skill} />
+          ))}
+        </ul>
+      </Section>
+    );
+  };
+
+  const renderSoftSkill = (): ReactElement => {
+    return (
+      <Section showBorder={false} title="Soft Skills">
+        <ul className="w-full flex flex-wrap gap-2 max-w-[750px]">
+          {SOFT_SKILLS.map((skill) => (
+            <Chip key={skill} text={skill} />
+          ))}
+        </ul>
+      </Section>
+    );
+  };
+
   return (
-    <div className=" w-full flex flex-col justify-center items-center pt-2 m-auto gap-6">
+    <div className=" w-full flex flex-col justify-center items-center pt-2 m-auto gap-6 mb-6">
       {renderProjectsSection()}
       {renderExperinceSection()}
+      {renderEducationSection()}
+      {renderSkill()}
+      {renderSoftSkill()}
     </div>
   );
 }
