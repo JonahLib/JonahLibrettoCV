@@ -13,7 +13,7 @@ export const PROJECTS: CardProps[] = [
     gitLink: "https://github.com/JonahLib/Pokedex",
     siteLink: "https://pokedex-tau-orcin.vercel.app/",
     title: "Pokedex",
-    description: "gotta catch em all!",
+    description: "Gotta catch em all!",
   },
 ];
 
